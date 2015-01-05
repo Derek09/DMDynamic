@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C94759D71A5A38E9008CE63E /* UIViewController+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C94759D61A5A38E9008CE63E /* UIViewController+extension.m */; };
 		C9CC793F18C95DB9004CA9C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CC793E18C95DB9004CA9C7 /* Foundation.framework */; };
 		C9CC794118C95DB9004CA9C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CC794018C95DB9004CA9C7 /* CoreGraphics.framework */; };
 		C9CC794318C95DB9004CA9C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CC794218C95DB9004CA9C7 /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C94759D51A5A38E9008CE63E /* UIViewController+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+extension.h"; sourceTree = "<group>"; };
+		C94759D61A5A38E9008CE63E /* UIViewController+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+extension.m"; sourceTree = "<group>"; };
 		C9CC793B18C95DB9004CA9C7 /* DMDynamic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMDynamic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CC793E18C95DB9004CA9C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9CC794018C95DB9004CA9C7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +125,8 @@
 				C9CC795718C95DB9004CA9C7 /* ViewController.m */,
 				C9CC795918C95DB9004CA9C7 /* Images.xcassets */,
 				C9CC794518C95DB9004CA9C7 /* Supporting Files */,
+				C94759D51A5A38E9008CE63E /* UIViewController+extension.h */,
+				C94759D61A5A38E9008CE63E /* UIViewController+extension.m */,
 			);
 			path = DMDynamic;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C94759D71A5A38E9008CE63E /* UIViewController+extension.m in Sources */,
 				C9CC795818C95DB9004CA9C7 /* ViewController.m in Sources */,
 				C9CC794F18C95DB9004CA9C7 /* AppDelegate.m in Sources */,
 				C9CC794B18C95DB9004CA9C7 /* main.m in Sources */,
@@ -474,6 +480,7 @@
 				C9CC797218C95DB9004CA9C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9CC797318C95DB9004CA9C7 /* Build configuration list for PBXNativeTarget "DMDynamicTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +489,7 @@
 				C9CC797518C95DB9004CA9C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
