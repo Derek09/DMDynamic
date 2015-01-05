@@ -8,25 +8,33 @@
 
 #import "ViewController.h"
 #include <objc/runtime.h>
+#import "SmartMadSKStoreProductViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<SmartMadSKStoreProductViewControllerDelegate>
 
 
 @property(strong)NSString* dynamicString;
+@property(strong)SmartMadSKStoreProductViewController* storeViewController;
 
 @end
 
 @implementation ViewController
 
 @dynamic dynamicString;
+- (IBAction)btnClicked:(id)sender {
+    _storeViewController = [[SmartMadSKStoreProductViewController alloc] initWithItunesIdentifier:@"508314963"];
+    self.storeViewController.smartmadDelegate = self;
+    self.storeViewController.statusBarNeedHidden = [UIApplication sharedApplication].statusBarHidden;
+    [self presentViewController:self.storeViewController animated:YES completion:nil];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.dynamicString=@"this is dynamic";
-    NSLog(@"get :%@",self.dynamicString);
+//    self.dynamicString=@"this is dynamic";
+//    NSLog(@"get :%@",self.dynamicString);
 }
 
 +(BOOL)resolveInstanceMethod:(SEL)name
@@ -49,7 +57,7 @@ id getdynamicMethodIMP(id obj,SEL _cmd,id str ) //str is the value of dynamicStr
     //how to access function of objective-c
     int (*computeNum)(id,SEL,int);
     computeNum = (int (*)(id,SEL,int))[obj methodForSelector:@selector(doComputeWithNum:)];
-    computeNum(obj,@selector(doComputeWithNum:),str);
+    computeNum(obj,@selector(doComputeWithNum:),1);
     return str;
     
 }
@@ -57,9 +65,9 @@ void dynamicMethodIMP(id obj, SEL _cmd,char* str )
 {
 }
 
--(void)doComputeWithNum:(NSString*)string
+-(void)doComputeWithNum:(NSInteger)value
 {
-    NSLog(@"doComputeWithNum :%@",string);
+    NSLog(@"doComputeWithNum :%d",value);
 }
 
 

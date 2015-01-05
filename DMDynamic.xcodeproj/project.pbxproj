@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C94759D71A5A38E9008CE63E /* UIViewController+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C94759D61A5A38E9008CE63E /* UIViewController+extension.m */; };
+		C94759DA1A5A3A77008CE63E /* SKStoreProductViewController+Tracking.m in Sources */ = {isa = PBXBuildFile; fileRef = C94759D91A5A3A77008CE63E /* SKStoreProductViewController+Tracking.m */; };
+		C94759DD1A5A3B20008CE63E /* SmartMadSKStoreProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94759DC1A5A3B20008CE63E /* SmartMadSKStoreProductViewController.m */; };
+		C94759EF1A5A7F8D008CE63E /* DeSGFParse.m in Sources */ = {isa = PBXBuildFile; fileRef = C94759EE1A5A7F8D008CE63E /* DeSGFParse.m */; };
 		C9CC793F18C95DB9004CA9C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CC793E18C95DB9004CA9C7 /* Foundation.framework */; };
 		C9CC794118C95DB9004CA9C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CC794018C95DB9004CA9C7 /* CoreGraphics.framework */; };
 		C9CC794318C95DB9004CA9C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CC794218C95DB9004CA9C7 /* UIKit.framework */; };
@@ -38,6 +41,12 @@
 /* Begin PBXFileReference section */
 		C94759D51A5A38E9008CE63E /* UIViewController+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+extension.h"; sourceTree = "<group>"; };
 		C94759D61A5A38E9008CE63E /* UIViewController+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+extension.m"; sourceTree = "<group>"; };
+		C94759D81A5A3A77008CE63E /* SKStoreProductViewController+Tracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKStoreProductViewController+Tracking.h"; sourceTree = "<group>"; };
+		C94759D91A5A3A77008CE63E /* SKStoreProductViewController+Tracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKStoreProductViewController+Tracking.m"; sourceTree = "<group>"; };
+		C94759DB1A5A3B20008CE63E /* SmartMadSKStoreProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartMadSKStoreProductViewController.h; sourceTree = "<group>"; };
+		C94759DC1A5A3B20008CE63E /* SmartMadSKStoreProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartMadSKStoreProductViewController.m; sourceTree = "<group>"; };
+		C94759ED1A5A7F8D008CE63E /* DeSGFParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeSGFParse.h; sourceTree = "<group>"; };
+		C94759EE1A5A7F8D008CE63E /* DeSGFParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeSGFParse.m; sourceTree = "<group>"; };
 		C9CC793B18C95DB9004CA9C7 /* DMDynamic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMDynamic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CC793E18C95DB9004CA9C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9CC794018C95DB9004CA9C7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +126,10 @@
 		C9CC794418C95DB9004CA9C7 /* DMDynamic */ = {
 			isa = PBXGroup;
 			children = (
+				C94759ED1A5A7F8D008CE63E /* DeSGFParse.h */,
+				C94759EE1A5A7F8D008CE63E /* DeSGFParse.m */,
+				C94759DB1A5A3B20008CE63E /* SmartMadSKStoreProductViewController.h */,
+				C94759DC1A5A3B20008CE63E /* SmartMadSKStoreProductViewController.m */,
 				C9CC794D18C95DB9004CA9C7 /* AppDelegate.h */,
 				C9CC794E18C95DB9004CA9C7 /* AppDelegate.m */,
 				C9CC795018C95DB9004CA9C7 /* Main_iPhone.storyboard */,
@@ -127,6 +140,8 @@
 				C9CC794518C95DB9004CA9C7 /* Supporting Files */,
 				C94759D51A5A38E9008CE63E /* UIViewController+extension.h */,
 				C94759D61A5A38E9008CE63E /* UIViewController+extension.m */,
+				C94759D81A5A3A77008CE63E /* SKStoreProductViewController+Tracking.h */,
+				C94759D91A5A3A77008CE63E /* SKStoreProductViewController+Tracking.m */,
 			);
 			path = DMDynamic;
 			sourceTree = "<group>";
@@ -259,7 +274,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C94759D71A5A38E9008CE63E /* UIViewController+extension.m in Sources */,
+				C94759DD1A5A3B20008CE63E /* SmartMadSKStoreProductViewController.m in Sources */,
+				C94759DA1A5A3A77008CE63E /* SKStoreProductViewController+Tracking.m in Sources */,
 				C9CC795818C95DB9004CA9C7 /* ViewController.m in Sources */,
+				C94759EF1A5A7F8D008CE63E /* DeSGFParse.m in Sources */,
 				C9CC794F18C95DB9004CA9C7 /* AppDelegate.m in Sources */,
 				C9CC794B18C95DB9004CA9C7 /* main.m in Sources */,
 			);
