@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C94759D71A5A38E9008CE63E /* UIViewController+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C94759D61A5A38E9008CE63E /* UIViewController+extension.m */; };
+		C91F461A1A5BAA17002FE199 /* DeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91F46191A5BAA17002FE199 /* DeCollectionViewController.m */; };
+		C91F461D1A5BDD2F002FE199 /* DeHomeWorkCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C91F461C1A5BDD2F002FE199 /* DeHomeWorkCellTableViewCell.m */; };
 		C94759DA1A5A3A77008CE63E /* SKStoreProductViewController+Tracking.m in Sources */ = {isa = PBXBuildFile; fileRef = C94759D91A5A3A77008CE63E /* SKStoreProductViewController+Tracking.m */; };
 		C94759DD1A5A3B20008CE63E /* SmartMadSKStoreProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94759DC1A5A3B20008CE63E /* SmartMadSKStoreProductViewController.m */; };
 		C94759EF1A5A7F8D008CE63E /* DeSGFParse.m in Sources */ = {isa = PBXBuildFile; fileRef = C94759EE1A5A7F8D008CE63E /* DeSGFParse.m */; };
@@ -39,8 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C94759D51A5A38E9008CE63E /* UIViewController+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+extension.h"; sourceTree = "<group>"; };
-		C94759D61A5A38E9008CE63E /* UIViewController+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+extension.m"; sourceTree = "<group>"; };
+		C91F46181A5BAA17002FE199 /* DeCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeCollectionViewController.h; sourceTree = "<group>"; };
+		C91F46191A5BAA17002FE199 /* DeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeCollectionViewController.m; sourceTree = "<group>"; };
+		C91F461B1A5BDD2F002FE199 /* DeHomeWorkCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeHomeWorkCellTableViewCell.h; path = ../DeHomeWorkCellTableViewCell.h; sourceTree = "<group>"; };
+		C91F461C1A5BDD2F002FE199 /* DeHomeWorkCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeHomeWorkCellTableViewCell.m; path = ../DeHomeWorkCellTableViewCell.m; sourceTree = "<group>"; };
 		C94759D81A5A3A77008CE63E /* SKStoreProductViewController+Tracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKStoreProductViewController+Tracking.h"; sourceTree = "<group>"; };
 		C94759D91A5A3A77008CE63E /* SKStoreProductViewController+Tracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKStoreProductViewController+Tracking.m"; sourceTree = "<group>"; };
 		C94759DB1A5A3B20008CE63E /* SmartMadSKStoreProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartMadSKStoreProductViewController.h; sourceTree = "<group>"; };
@@ -138,10 +141,12 @@
 				C9CC795718C95DB9004CA9C7 /* ViewController.m */,
 				C9CC795918C95DB9004CA9C7 /* Images.xcassets */,
 				C9CC794518C95DB9004CA9C7 /* Supporting Files */,
-				C94759D51A5A38E9008CE63E /* UIViewController+extension.h */,
-				C94759D61A5A38E9008CE63E /* UIViewController+extension.m */,
 				C94759D81A5A3A77008CE63E /* SKStoreProductViewController+Tracking.h */,
 				C94759D91A5A3A77008CE63E /* SKStoreProductViewController+Tracking.m */,
+				C91F461B1A5BDD2F002FE199 /* DeHomeWorkCellTableViewCell.h */,
+				C91F461C1A5BDD2F002FE199 /* DeHomeWorkCellTableViewCell.m */,
+				C91F46181A5BAA17002FE199 /* DeCollectionViewController.h */,
+				C91F46191A5BAA17002FE199 /* DeCollectionViewController.m */,
 			);
 			path = DMDynamic;
 			sourceTree = "<group>";
@@ -222,6 +227,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Derek Lix";
 				TargetAttributes = {
+					C9CC793A18C95DB9004CA9C7 = {
+						DevelopmentTeam = JY23Q489LC;
+					};
 					C9CC795E18C95DB9004CA9C7 = {
 						TestTargetID = C9CC793A18C95DB9004CA9C7;
 					};
@@ -273,7 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C94759D71A5A38E9008CE63E /* UIViewController+extension.m in Sources */,
+				C91F461D1A5BDD2F002FE199 /* DeHomeWorkCellTableViewCell.m in Sources */,
+				C91F461A1A5BAA17002FE199 /* DeCollectionViewController.m in Sources */,
 				C94759DD1A5A3B20008CE63E /* SmartMadSKStoreProductViewController.m in Sources */,
 				C94759DA1A5A3A77008CE63E /* SKStoreProductViewController+Tracking.m in Sources */,
 				C9CC795818C95DB9004CA9C7 /* ViewController.m in Sources */,
@@ -416,6 +425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Derek Lix (FB4D6L4D48)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DMDynamic/DMDynamic-Prefix.pch";
 				INFOPLIST_FILE = "DMDynamic/DMDynamic-Info.plist";
@@ -429,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Derek Lix (FB4D6L4D48)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DMDynamic/DMDynamic-Prefix.pch";
 				INFOPLIST_FILE = "DMDynamic/DMDynamic-Info.plist";

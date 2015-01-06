@@ -52,6 +52,8 @@ static  CGRect   gcancelMaskRect;
                                                 
                                                 if (result) {
                                                     NSLog(@"loadProductWithParameters OK");
+
+                                                 //   [NSTimer scheduledTimerWithTimeInterval:6 target:self selector:@selector(dotest) userInfo:nil repeats:YES];
                                                     [self hideStoreCover:NO];
                                                 }
                                                 else {
@@ -64,6 +66,24 @@ static  CGRect   gcancelMaskRect;
     return self;
 }
 
+
+-(void)lookoutkeyWindowSubViews:(UIView*)view
+{
+    NSArray*  array = [view subviews];
+    NSLog(@"subViews Array :%@",array);
+    for (UIView*  obj in array) {
+        [self lookoutkeyWindowSubViews:obj];
+    }
+    
+}
+
+
+-(void)dotest
+{
+    UIWindow*  window  = [[UIApplication sharedApplication] keyWindow];
+    [self lookoutkeyWindowSubViews:window];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -73,6 +93,10 @@ static  CGRect   gcancelMaskRect;
     return self;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear: animated];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -191,6 +215,9 @@ static  CGRect   gcancelMaskRect;
     gstoreMaskRect = [self.view convertRect:_smUIViewButtonStore.frame toView:nil];
     gcancelMaskRect = [self.view convertRect:_smUIViewButtonCancel.frame toView:nil];
     
+    NSLog(@"gstoreMaskRect  :%@",NSStringFromCGRect(gstoreMaskRect));
+    NSLog(@"gcancelMaskRect  :%@",NSStringFromCGRect(gcancelMaskRect));
+    
 }
 
 - (CGFloat)statusBarHeight {
@@ -214,10 +241,11 @@ static  CGRect   gcancelMaskRect;
         if (self.smartmadDelegate && [self.smartmadDelegate respondsToSelector:@selector(viewControllerDidClickStore:)]) {
             [self.smartmadDelegate viewControllerDidClickStore:self];
         }
+    
 
         NSString *string = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/us/app/id%@?mt=8",self.itunesID];//temp
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];
-        [self dismissViewControllerAnimated:YES completion:nil];
+      //  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];
+      //  [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 
@@ -230,8 +258,6 @@ static  CGRect   gcancelMaskRect;
     }
 }
 
-
-
 @end
 
 
@@ -241,10 +267,47 @@ static  CGRect   gcancelMaskRect;
 
 @implementation SmartMadUIViewButton
 
+-(void)lookoutSuperViews:(UIView*)view
+{
+    UIView*  supeView = [view superview];
+    NSLog(@"supeView :%@ currentView:%@",supeView,view);
+    if (supeView) {
+        [self lookoutSuperViews:supeView];
+    }else
+        return;
+    
+}
+
+
+//-(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
+//{
+//    return NO;
+//}
+
+
+- (void) traverseResponderChainForUIView:(id)obj {
+    id nextResponder = [obj nextResponder];
+    NSLog(@"nextResponder :%@",nextResponder);
+    if ([nextResponder isKindOfClass:[UIView class]]) {
+        [self traverseResponderChainForUIView:nextResponder];
+    }else{
+        return ;
+    }
+}
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     if (self.smartmadDelegate && [self.smartmadDelegate respondsToSelector:@selector(onTouchUpInsideEvent:)]) {
         [self.smartmadDelegate onTouchUpInsideEvent:self];
     }
+    
+    UITouch *touch = [[event allTouches] anyObject];
+    CGPoint point = [touch locationInView:self];
+    
+    NSLog(@" subviews :%@",[(UIView*)self.nextResponder subviews]);
+    
+    [[UIApplication sharedApplication].keyWindow bringSubviewToFront:[self superview]];
+    
+    [self lookoutSuperViews:self];
+    [self traverseResponderChainForUIView:self];
 }
 @end

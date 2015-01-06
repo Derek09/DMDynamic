@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #include <objc/runtime.h>
 #import "SmartMadSKStoreProductViewController.h"
+#import "DeCollectionViewController.h"
 
 @interface ViewController ()<SmartMadSKStoreProductViewControllerDelegate>
 
@@ -22,11 +23,19 @@
 
 @dynamic dynamicString;
 - (IBAction)btnClicked:(id)sender {
-    _storeViewController = [[SmartMadSKStoreProductViewController alloc] initWithItunesIdentifier:@"508314963"];
-    self.storeViewController.smartmadDelegate = self;
+    
+//    DeCollectionViewController* collectionViewController = [[DeCollectionViewController alloc] init];
+//     [self presentViewController:collectionViewController animated:YES completion:nil];
+//    return;
+    _storeViewController = [[SmartMadSKStoreProductViewController alloc] initWithItunesIdentifier:@"529479190"];//508314963
+  //  self.storeViewController.smartmadDelegate = self;
     self.storeViewController.statusBarNeedHidden = [UIApplication sharedApplication].statusBarHidden;
     [self presentViewController:self.storeViewController animated:YES completion:nil];
+   // https://itunes.apple.com/cn/app/squares-challenging-puzzle/id910510217?mt=8
+    
+    //https://itunes.apple.com/cn/app/bu-luo-chong-tu-clash-of-clans/id529479190?mt=8
 }
+
 
 - (void)viewDidLoad
 {
